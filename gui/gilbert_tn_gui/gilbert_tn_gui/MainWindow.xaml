@@ -1,0 +1,25 @@
+﻿<Window x:Class="gilbert_tn_gui.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="86.2" Width="206" MinWidth="350" MinHeight="350">
+    <Grid x:Name="grid">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TextBlock x:Name="namePreview" Margin="10,10,117,32" TextWrapping="Wrap" Background="#FFD8D8D8" ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.HorizontalScrollBarVisibility="Auto">
+            <TextBlock.BindingGroup>
+                <BindingGroup/>
+            </TextBlock.BindingGroup>
+        </TextBlock>
+        <Button x:Name="generateBtn" Content="Generate" Margin="0,0,10,119" Height="35" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="102" Click="generateBtn_Click"/>
+        <Button x:Name="resetBtn" Content="Reset" Margin="0,0,10,81" RenderTransformOrigin="-0.507,-2.571" Height="23" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="102" Click="resetBtn_Click"/>
+        <TextBox x:Name="lengthBox" TextWrapping="Wrap" Margin="0,0,10,172" RenderTransformOrigin="1.25,0.639" FontWeight="Bold" FontSize="16" HorizontalContentAlignment="Right" Height="26" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="102" AllowDrop="False" ToolTip="The length of the names to be generated." HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Disabled" IsUndoEnabled="False" MaxLines="1"/>
+        <Button x:Name="exportBtn" Content="Export" Margin="0,0,10,32" RenderTransformOrigin="0.453,1.057" Height="35" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="102" Click="exportBtn_Click"/>
+        <Image x:Name="appLogo" Height="100" Margin="0,0,10,209" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="100"/>
+        <TextBlock x:Name="statusBar" Margin="10,0,10,10" TextWrapping="Wrap" Height="16" VerticalAlignment="Bottom"/>
+
+    </Grid>
+</Window>
