@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{71c177a8-9e5b-434c-9000-cd3810a72ed8}</ProjectGuid>
+    <ProjectHome />
+    <StartupFile>formatter\format_base.py</StartupFile>
+    <SearchPath />
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <ProjectTypeGuids>{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <InterpreterId>Global|PythonCore|3.6</InterpreterId>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition=" '$(VisualStudioVersion)' == '' ">10.0</VisualStudioVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="formatter\formatter_test.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="formatter\format_base.py" />
+    <Compile Include="gilbert\namer.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="data\name_db\names.csv.txt" />
+    <Content Include="data\name_db\names.txt" />
+    <Content Include="gui\gilbert_tn_gui\gilbert_tn_gui\obj\Debug\gilbert_tn_gui.csproj.FileListAbsolute.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="data\" />
+    <Folder Include="data\name_db" />
+    <Folder Include="formatter" />
+    <Folder Include="gilbert" />
+    <Folder Include="gui\" />
+    <Folder Include="gui\gilbert_tn_gui\" />
+    <Folder Include="gui\gilbert_tn_gui\gilbert_tn_gui\" />
+    <Folder Include="gui\gilbert_tn_gui\gilbert_tn_gui\obj\" />
+    <Folder Include="gui\gilbert_tn_gui\gilbert_tn_gui\obj\Debug" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterpreterReference Include="Global|PythonCore|3.6" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+</Project>
