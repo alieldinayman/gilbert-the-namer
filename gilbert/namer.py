@@ -1,20 +1,23 @@
 import pandas as pd
 import sklearn as sk
 
-class NamerBot():
+
+class NamerBot:
     """AI Class. Used for analyzing, testing, and returning results based on output parameters that are received by the wrapper"""
     def __init__():
         pass
         
-    def getNameList():
+    def get_name_list:
         """gets name lists and separates by region (and possibly by size and sex)"""
-        df = pd.read_csv('insert_path', add params)
-        df_english = nameList['English']
-        df_arabic = nameList['Arabic']
+        df = pd.read_csv("..\\data\\name_db\\names", delimiter=',')
+        #df_english = nameList['English']
+        #df_arabic = nameList['Arabic']
 
-    def testNames(region, size, sex):
+
+
+    def test_names(region, size, sex):
         """tests the AI bot against the names until desired accuracy is obtained"""
 
 
-    def GetResults(output_parameters):
+    def get_results(output_parameters):
         """public method used by the wrapper that will call the AI bot and define parameters"""
