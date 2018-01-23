@@ -24,6 +24,8 @@ wheels/
 *.egg-info/
 .installed.cfg
 *.egg
+data/names_formatted/
+gui/gilbert_tn_gui/gilbert_tn_gui/bin/
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
