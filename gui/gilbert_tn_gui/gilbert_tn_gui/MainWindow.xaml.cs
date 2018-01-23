@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+
 namespace gilbert_tn_gui
 {
     /// <summary>
@@ -20,11 +21,12 @@ namespace gilbert_tn_gui
     /// </summary>
     public partial class MainWindow : Window
     {
-        Communicator comm = new Communicator();
+        Communicator comm;
 
         public MainWindow()
         {
             InitializeComponent();
+            comm = new Communicator();
         }
 
         private void generateBtn_Click(object sender, RoutedEventArgs e)
@@ -32,7 +34,7 @@ namespace gilbert_tn_gui
             try
             {
                 namePreview.Text = "Hello, \n\nThis is a prototype for Gilbert the Namer. \n\nSee you soon!";
-                statusBar.Text = "Successfully generated";
+                statusBar.Text = comm.ExecuteFunctionWithReturn("launch_gilbert");
             }
             catch(Exception message)
             {
@@ -49,7 +51,7 @@ namespace gilbert_tn_gui
         {
             try
             {
-                statusBar.Text = "Succesfully exported!";
+                statusBar.Text = comm.ExecuteFunctionWithReturn("format_names");
             }
             catch(Exception message)
             {
